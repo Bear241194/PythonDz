@@ -1,0 +1,22 @@
+a = 2
+print('Добрый день')
+while a == 2:
+
+    name = input('Введите имя пациента: ')
+    sname = input('Введите фамилию пациента: ')
+    age = int(input('Введите возраст: '))
+    weigh = int(input('Введите вес: '))
+
+    if age < 30 and 50 < weigh < 120:
+      print('Пациент', sname, name, ',', 'возраст', age, 'год', ',', 'вес', weigh, '-', 'В норме')
+    else:
+      print('Пациент', sname, name, ',', 'возраст', age, 'год', ',', 'вес', weigh, '-', 'Не в норме')
+
+    chooze=str(input('Продолжить?(Да\Нет)'))
+
+    if chooze == 'Да' :
+      a=2
+    else:
+     a=a+1
+
+print('Хорошего дня!')
