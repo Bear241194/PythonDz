@@ -1,0 +1,9 @@
+name = 'y = -12x + 11111140.2121'
+name = (name.split())
+x = 2.5
+x = float(x)
+k = name[2]
+k = float(k[:3])
+b = float(name[4])
+y = k * x + b
+print('y =', y)

@@ -1,0 +1,9 @@
+dano = [1, 2, 3, 4]
+nov = []
+dlinna = len(dano)
+for i in range(dlinna):
+    if dano[i] % 2 == 0:
+        nov.append(dano[i] / 4)
+    else:
+        nov.append(dano[i] * 4)
+print(nov)

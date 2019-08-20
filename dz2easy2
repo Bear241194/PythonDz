@@ -1,0 +1,4 @@
+dano = ["яблоко", "банан", "киви", "арбуз"]
+dlinna=len(dano)
+for i in range(dlinna):
+    print(str(i+1) + '.' + '{}'.format(dano[i]))

@@ -1,0 +1,28 @@
+data = input("Введите дату в формате дд.мм.гггг : ")
+
+
+def check_date(a):
+    try:
+        numbers = a.split(".")
+        if len(numbers) != 3:
+            return False
+        if (len(numbers[0]) != 2) or (len(numbers[1]) != 2) or (len(numbers[2]) != 4):
+            return False
+        date = int(numbers[0])
+        month = int(numbers[1])
+        year = int(numbers[2])
+        if 0 < year < 10000:
+            if 0 < month < 13:
+                if 0 < date < 31:
+                    return True
+                if (date == 31) and (month in (1, 3, 5, 7, 8, 10, 12)):
+                    return True
+        return False
+    except:
+        return False
+
+
+if not check_date(data):
+    print('Некоректная дата (')
+else:
+    print('Корректная дата )')
