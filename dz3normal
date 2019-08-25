@@ -1,0 +1,31 @@
+import os
+import math
+
+names = ['Вася', 'Антон', 'Олег', 'Сергей', 'Александр', 'Андрей']
+salary = [10000, 15000, 710000, 18000, 13500, 1000000]
+
+PATH = r'C:\Users\Bear\PycharmProjects\untitled'
+FILE_NAME = 'salary.txt'
+
+full_path = os.path.join(PATH, FILE_NAME)
+
+my_list = dict(zip(names, salary))
+
+with open(full_path, 'w', encoding='UTF-8') as file:
+    for key, item in my_list.items():
+        if item < 500000:
+            file.write('{} - {}\n'.format(key, item))
+file.close()
+my_new_list = []
+with open(full_path, 'r', encoding='UTF-8') as file:
+    for f in file.readlines():
+        my_new_list.append(f.splitlines())
+
+    for el in my_new_list:
+        el = ''.join(el)
+        x = int(el.split(' ')[2])
+        x = str(math.trunc(x - (x * 0.13)))
+        del (el.split(' ')[2])
+        el.split(' ')[2] = x
+
+print(my_new_list)

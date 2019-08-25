@@ -1,0 +1,13 @@
+def m_string(*args):
+    return max(list(args), key=len)
+
+
+l_strings = []
+while True:
+    e_string = input('Введите строку : ')
+    if e_string != '':
+        l_strings.append(e_string)
+    else:
+        break
+
+print('Самая длинная строка : {}.'.format(m_string(*l_strings)))

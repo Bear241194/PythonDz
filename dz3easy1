@@ -1,0 +1,10 @@
+def person_info(name, age, place):
+    print('{}'.format(name.title()), '{} года,'.format(age), 'проживает в городе {}.'.format(place))
+
+
+name_person = input('Введите имя : ')
+age_person = input('Введите возраст : ')
+living_place = input('Введите место проживания : ')
+
+person_info(name_person, age_person, living_place)
+print()

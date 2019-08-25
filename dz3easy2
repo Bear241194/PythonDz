@@ -1,0 +1,15 @@
+def max_number(*args):
+    list_of_args = list(args)
+    max_value = list_of_args[0]
+    for item_in_list in list_of_args:
+        if int(max_value) < int(item_in_list):
+            max_value = item_in_list
+    return max_value
+
+
+v_list = []
+for count in range(3):
+    v_list.append(input('Введите число: '))
+
+print('Наибольшее число : {}.'.format(max_number(*v_list)))
+print()
