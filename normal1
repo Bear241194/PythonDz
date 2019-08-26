@@ -1,0 +1,24 @@
+import re
+
+pattern_name = '^[A-ZА-Я][a-zа-я]+$'
+pattern_surname = pattern_name
+pattern_email = '^[a-z_0-9]+@[a-z0-9]+\.(ru|org|com)$'
+
+name = input('Введите имя с заглавной буквы: ')
+surname = input('Введите фамилию с заглавной буквы: ')
+email = input('Введите имейл в нижнем регистре: ')
+
+result_name = re.match(pattern_name, name)
+result_surname = re.match(pattern_surname, surname)
+result_email = re.match(pattern_email, email)
+
+if result_name:
+    if result_surname:
+        if result_email:
+            print('Данные введены корректно!')
+        else:
+            print('Email введен некорректно!')
+    else:
+        print('Фамилия введена некорректно!')
+else:
+    print('Имя введено некорректно!')
