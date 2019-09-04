@@ -1,0 +1,86 @@
+class TownCar:
+
+    def __init__(self, color, speed, name):
+        self.color = color
+        self.speed = speed
+        self.name = name
+        self.is_police = False
+
+    def go(self):
+        print('Автомобиль начал движение.')
+
+    def stop(self):
+        print('Автомобиль остановился.')
+
+    def turn(self):
+        direction = input('Введите, куда поворачивать?')
+        print('Автомобиль совершил поворот {}.'.format(direction))
+
+    def speed(self):
+        return self.speed
+
+
+class SportCar:
+
+    def __init__(self, color, speed, name):
+        self.color = color
+        self.speed = speed
+        self.name = name
+        self.is_police = False
+
+    def go(self):
+        print('Автомобиль начал движение.')
+
+    def stop(self):
+        print('Автомобиль остановился.')
+
+    def turn(self):
+        direction = input('Введите, куда поворачивать?')
+        print('Автомобиль совершил поворот {}.'.format(direction))
+
+    def speed(self):
+        return self.speed
+
+
+class WorkCar:
+
+    def __init__(self, color, speed, name):
+        self.color = color
+        self.speed = speed
+        self.name = name
+        self.is_police = False
+
+    def go(self):
+        print('Автомобиль начал движение.')
+
+    def stop(self):
+        print('Автомобиль остановился.')
+
+    def turn(self):
+        direction = input('Введите, куда поворачивать?')
+        print('Автомобиль совершил поворот {}.'.format(direction))
+
+    def speed(self):
+        return self.speed
+
+
+class PoliceCar:
+
+    def __init__(self, color, speed, name):
+        self.color = color
+        self.speed = speed
+        self.name = name
+        self.is_police = True
+
+    def go(self):
+        print('Автомобиль начал движение.')
+
+    def stop(self):
+        print('Автомобиль остановился.')
+
+    def turn(self):
+        direction = input('Введите, куда поворачивать?')
+        print('Автомобиль совершил поворот {}.'.format(direction))
+
+    def speed(self):
+        return self.speed
