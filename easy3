@@ -1,0 +1,7 @@
+import shutil
+
+file_name = __file__.split('/')[-1:][0]
+
+new = file_name + '.copy'
+shutil.copy(file_name, new)
+print('Файл {} был успешно создан.'.format(new))
